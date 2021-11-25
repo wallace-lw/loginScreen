@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, #55B0F6, #5570F6);
+    background-repeat: no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main.container {
+    background: #fafafa;
+    max-width: 600px;
+    min-height: 50vh;
+    padding: 3rem;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+main h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg,#55B0F6, #5570F6);
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+    border: none;
+}
+
+form .input-field:first-child{
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg,#55B0F6, #5570F6);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin:left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7); 
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+form #botao {
+    margin-top: 2rem;
+    background: linear-gradient(to left, #778EFF, #4E5A97);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: 3rem;
+}
+
+form #botao:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #778EFF, #4E5A97);
+
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.rodape span {
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.rodape .redes-socias {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.rodape .redes-socias a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.rodape .redes-socias a {
+    text-decoration: none;
+    color: white;
+}
+
+.rodape .redes-socias.twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+.rodape .redes-socias.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+
+}
